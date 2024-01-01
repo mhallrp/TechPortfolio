@@ -2,7 +2,7 @@ import Styles from './page.module.css'
 
 export const landingText = {
     helloText: "Hello, I'm Matt",
-    topTitle: <>A <span className={ Styles.greenSpan }>full-stack </span>developer based in Edinburgh</>,
+    topTitle: <>A <span className={ Styles.greenSpan }>full-stack </span> software developer based in Edinburgh</>,
     topSkills:<>Drawing on 3 years of expertise in front-end and back-end development,<br/>I craft innovative applications for both mobile and web</>,
     smallSkills: "My skills",
     bigSKills:"Technical Expertise",
@@ -45,3 +45,5 @@ export const landingText = {
             📧 <a href="mailto:hello@matthall.london">hello@matt-hall.dev</a>
         </>
 };
+
+export default landingText

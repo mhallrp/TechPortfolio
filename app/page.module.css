@@ -1,4 +1,4 @@
-.topContent {
+.Home {
   display: flex;
   flex-wrap:wrap;
   flex-direction: row;
@@ -36,18 +36,13 @@
 }
 .topImage{
   max-width: 500px;
-  margin-left: 50px;
-  padding-bottom: 70px;
-}
-
-.topImage{
-  width: 500px;
+  max-height: 619px;
   margin-left: 50px;
   padding-bottom: 70px;
 }
 
 /* Second section: Skills and technical overview */
-.skillsSection{
+.Skills{
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   padding: 100px 85px;
@@ -65,7 +60,7 @@
 }
 
 /* Third Section: About Me */
-.aboutSection{
+.About{
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   padding: 100px 85px;
@@ -101,7 +96,7 @@
 
 /* TOP SECTION BREAK POINT */
 @media (max-width: 1334px) {
-  .topContent{
+  .Home{
       flex-direction: column;
       min-height: fit-content;
       padding-top:0px
@@ -116,6 +111,7 @@
       margin-top: 40px;
       margin-bottom: 40px;
       width:35%;
+      height: auto;
       margin-right: 32px;
   }
 }
@@ -179,7 +175,7 @@
 }
 
 @media (max-width:600px){
-  .skillsSection{
+  .Skills{
       padding:32px 32px;
   }
   .largeTitle{

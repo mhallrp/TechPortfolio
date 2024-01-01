@@ -6,6 +6,7 @@
     background: #FFF;
     box-shadow: 0px 5px 80px 0px rgba(0, 0, 0, 0.10);
     position: fixed;
+    height: 60px
 }
 .navSection {
     display: grid;
@@ -23,11 +24,9 @@
     flex-basis: auto;
     font-family: 'Roboto', sans-serif;
 }
-.centerSection .navButton{
+.centerSection button{
     padding: 0px 22px;
     font-weight: 400;
-    color: #484848;
-    text-decoration: none;
     font-size: 14px;
 }
 

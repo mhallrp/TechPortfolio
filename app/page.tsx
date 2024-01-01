@@ -41,7 +41,7 @@ const Landing = () => {
             </section>
             <section id="aboutSection" className={ Styles.aboutSection }>
                 <div className={ Styles.aboutData }>
-                    <Image height="550" width="416" className={ Styles.mattImage } src={ MattImage.src } alt="Matt Hall" />
+                    <Image height="416" width="550" className={ Styles.mattImage } src={ MattImage.src } alt="Matt Hall" />
                     <div className={ Styles.aboutText }>
                         <p>{ landingText.smallAbout }</p>
                         <p className={ Styles.largeTitle }>

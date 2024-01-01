@@ -1,95 +1,61 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Styles from './page.module.css'
+import NavBar from "../components/NavBar"
+import LaptopFire from "../assets/laptopFire.png"
+import MattImage from "../assets/mattImage.png"
+import SkillCard from "../components/SkillsCard"
+import Image from "next/image"
+import { landingText } from './constants'
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
+const Landing = () => {
+    return (
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            <NavBar />
+            <section id="topContent" className={ Styles.topContent }>
+                <div className={ Styles.topTextSection } >
+                    <div className={ Styles.topText }>
+                    <p className={ Styles.helloText }>
+                        { landingText.helloText }
+                    </p>
+                    <h1 className={ Styles.topMainText }>
+                        { landingText.topTitle }
+                    </h1>
+                    <p className={ Styles.topSkills }>
+                        { landingText.topSkills }
+                    </p>
+                    </div>
+                </div>
+                  <Image className={ Styles.topImage } src={ LaptopFire.src } alt="fire" height="619" width="500"/>
+            </section>
+            <section id="skillsSection" className={ Styles.skillsSection }>
+                <p >
+                    { landingText.smallSkills }
+                </p>
+                <p className={ Styles.largeTitle }>
+                    { landingText.bigSKills }
+                </p>
+                <div className={ Styles.skillCards }>
+                    { landingText.skillsData.map(skill => (
+                        <SkillCard key={skill.id} image={skill.id} title={skill.title} text={skill.text} />
+                    )) }
+                </div>
+            </section>
+            <section id="aboutSection" className={ Styles.aboutSection }>
+                <div className={ Styles.aboutData }>
+                    <img className={ Styles.mattImage } src={ MattImage.src } alt="Matt Hall" />
+                    <div className={ Styles.aboutText }>
+                        <p>{ landingText.smallAbout }</p>
+                        <p className={ Styles.largeTitle }>
+                            { landingText.bigAbout }
+                        </p>
+                        <p className={ Styles.aboutMainText }>
+                            { landingText.aboutMainText }
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section className={ Styles.footer }></section>
         </div>
-      </div>
+    );
+};
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
-}
+export default Landing;

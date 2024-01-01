@@ -1,0 +1,51 @@
+.navBar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+    background: #FFF;
+    box-shadow: 0px 5px 80px 0px rgba(0, 0, 0, 0.10);
+    position: fixed;
+}
+.navSection {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    width: 100%;
+    padding: 0 85px;
+}
+.leftSection, .rightSection {
+    display: flex;
+}
+.centerSection {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    font-family: 'Roboto', sans-serif;
+}
+.centerSection .navButton{
+    padding: 0px 22px;
+    font-weight: 400;
+    color: #484848;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.buttonSelected{
+    color: #0292B1;
+}
+
+.navTitle {
+    font-size: 22px;
+    margin-right:auto;
+    color: #484848;
+    font-weight: 500;
+}
+.navContact{
+    border: 1px solid #0292B1;
+    margin-left: auto;
+    height: 40px;
+    padding: 0px 20px;
+    border-radius: 5px;
+    color: #0292B1;
+}

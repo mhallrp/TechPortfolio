@@ -22,9 +22,9 @@ const NavBar = () => {
                     <h1 className={ Styles.navTitle }>{ constants.name }</h1>
                 </div>
                 <div className={ Styles.centerSection }>
-                    { constants.sections.map(value =>
-                        <button className={ activeSection === value && Styles.buttonSelected} onClick={ () => scrollTo(value) }>{ value }</button>
-                    ) }
+                    { constants.sections.map(value =>(
+                        <button key={value.id} className={ activeSection === value && Styles.buttonSelected} onClick={ () => scrollTo(value) }>{ value }</button>
+                    )) }
                 </div>
                 <div className={ Styles.rightSection }>
                     <button className={ Styles.navContact }>{ constants.contact }</button>

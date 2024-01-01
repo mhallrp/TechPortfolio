@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
 import Styles from './styles.module.css';
-import navBarValues from './constants'
+import constants from '../../app/constants'
 
 const NavBar = () => {
 
@@ -19,15 +19,15 @@ const NavBar = () => {
         <div className={ Styles.navBar }>
             <div className={ Styles.navSection }>
                 <div className={ Styles.leftSection }>
-                    <h1 className={ Styles.navTitle }>{ navBarValues.name }</h1>
+                    <h1 className={ Styles.navTitle }>{ constants.name }</h1>
                 </div>
                 <div className={ Styles.centerSection }>
-                    {navBarValues.navButtons.map(value =>
+                    { constants.sections.map(value =>
                         <button className={ activeSection === value && Styles.buttonSelected} onClick={ () => scrollTo(value) }>{ value }</button>
-                    )}
+                    ) }
                 </div>
                 <div className={ Styles.rightSection }>
-                    <button className={ Styles.navContact }>{ navBarValues.contact }</button>
+                    <button className={ Styles.navContact }>{ constants.contact }</button>
                 </div>
             </div>
         </div>

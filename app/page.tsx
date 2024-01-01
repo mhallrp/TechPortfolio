@@ -4,56 +4,56 @@ import LaptopFire from "../assets/laptopFire.png"
 import MattImage from "../assets/mattImage.png"
 import SkillCard from "../components/SkillsCard"
 import Image from "next/image"
-import landingValues from './constants'
+import constants from './constants'
 
 const Landing = () => {
     return (
         <div>
             <NavBar />
-            <section id="Home" className={ Styles.Home }>
+            <section id={ constants.sections[0] } className={ Styles.Home }>
                 <div className={ Styles.topTextSection } >
                     <div className={ Styles.topText }>
                     <p className={ Styles.helloText }>
-                        { landingValues.helloText }
+                        { constants.helloText }
                     </p>
                     <h1 className={ Styles.topMainText }>
-                        { landingValues.topTitle }
+                        { constants.topTitle }
                     </h1>
                     <p className={ Styles.topSkills }>
-                        { landingValues.topSkills }
+                        { constants.topSkills }
                     </p>
                     </div>
                 </div>
                   <Image className={ Styles.topImage } src={ LaptopFire.src } alt="fire" height="619" width="500" />
             </section>
-            <section id="Skills" className={ Styles.Skills }>
+            <section id={ constants.sections[1] } className={ Styles.Skills }>
                 <p >
-                    { landingValues.smallSkills }
+                    { constants.smallSkills }
                 </p>
                 <p className={ Styles.largeTitle }>
-                    { landingValues.bigSKills }
+                    { constants.bigSKills }
                 </p>
                 <div className={ Styles.skillCards }>
-                    { landingValues.skillsData.map(skill => (
+                    { constants.skillsData.map(skill => (
                         <SkillCard key={skill.id} image={skill.id} title={skill.title} text={skill.text} />
                     )) }
                 </div>
             </section>
-            <section id="About" className={ Styles.About }>
+            <section id={ constants.sections[2] } className={ Styles.About }>
                 <div className={ Styles.aboutData }>
                     <Image height="416" width="550" className={ Styles.mattImage } src={ MattImage.src } alt="Matt Hall" />
                     <div className={ Styles.aboutText }>
-                        <p>{ landingValues.smallAbout }</p>
+                        <p>{ constants.smallAbout }</p>
                         <p className={ Styles.largeTitle }>
-                            { landingValues.bigAbout }
+                            { constants.bigAbout }
                         </p>
                         <p className={ Styles.aboutMainText }>
-                            { landingValues.aboutMainText }
+                            { constants.aboutMainText }
                         </p>
                     </div>
                 </div>
             </section>
-            <section id="Portfolio"></section>
+            <section id={ constants.sections[3] }></section>
             <section className={ Styles.footer }></section>
         </div>
     );

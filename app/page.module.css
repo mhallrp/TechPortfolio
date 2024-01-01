@@ -16,7 +16,6 @@
   margin-left: 85px;
   padding-bottom: 70px;
 }
-
 .helloText{
   font-size: 20px;
   color: #484848;
@@ -40,8 +39,6 @@
   margin-left: 50px;
   padding-bottom: 70px;
 }
-
-/* Second section: Skills and technical overview */
 .Skills{
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
@@ -91,10 +88,8 @@
 
 .footer{
   height: 200px;
-  background-color: #F5FCFF;;
+  background-color: #F5FCFF;
 }
-
-/* TOP SECTION BREAK POINT */
 @media (max-width: 1334px) {
   .Home{
       flex-direction: column;

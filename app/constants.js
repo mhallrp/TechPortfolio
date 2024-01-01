@@ -3,7 +3,7 @@ import Styles from './page.module.css'
 export const constants = {
     name:"MATT HALL",
     contact:"Contact Me",
-    sections:[ 'Home', 'Skillssss', 'About', 'Portfolio' ],
+    sections:[ 'Home', 'Skills', 'About', 'Portfolio' ],
     helloText: "Hello, I'm Matt",
     topTitle: <>A <span className={ Styles.greenSpan }>full-stack </span> software developer based in Edinburgh</>,
     topSkills:<>Drawing on 3 years of expertise in front-end and back-end development,<br/>I craft innovative applications for both mobile and web</>,

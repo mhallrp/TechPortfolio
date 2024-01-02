@@ -1,31 +1,7 @@
-.navBar {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    flex-direction: row;
-    background: #FFF;
-    box-shadow: 0rem 0.5rem 5rem 0rem rgba(0, 0, 0, 0.10);
-    position: fixed;
-    height: 4rem
-}
-.navSection {
-    align-items: center;
-    width: 100%;
-    /* padding: 0 5rem; */
-}
-.leftSection, .rightSection {
-    display: flex;
-}
-.centerSection {
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: auto;
-    margin:auto;
-}
+
 .centerSection button{
-    padding: 0rem 1.5rem;
-    font-weight: 400;
-    font-size: 0.875rem;
+    /* padding: 0rem 1.5rem; */
+    /* font-size: 0.875rem; */
 }
 
 .buttonSelected{
@@ -38,12 +14,5 @@
     height: 40px;
     padding: 0px 1rem;
     border-radius: 5px;
-    /* font-family: 'Roboto', sans-serif; */
     color: #0292B1;
 }
-
-@media (max-width: 768px) {
-    .navSection {
-      grid-template-columns: 1fr 1fr;
-    }
-  }

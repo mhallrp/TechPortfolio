@@ -26,6 +26,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/constants.js", "components/NavBar/index.js", "components/SkillsCard/index.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/constants.js", "components/NavBar/index.ts", "components/SkillsCard/index.ts"],
   "exclude": ["node_modules"]
 }

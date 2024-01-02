@@ -5,11 +5,10 @@ import "./globals.css";
 const roboto = Roboto({
   weight: "400",
   subsets: ["latin"],
+  variable: "--font-roboto",
 });
 
-const oswald = Oswald({
-  subsets: ["latin"],
-});
+const oswald = Oswald({ subsets: ["latin"], variable: "--font-oswald" });
 
 export const metadata: Metadata = {
   title: "Matt Hall - Full Stack Software Developer",
@@ -23,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} ${oswald.className}`}>
+      <body className={`${roboto.variable} ${oswald.variable}`}>
         {children}
       </body>
     </html>

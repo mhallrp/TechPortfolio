@@ -22,7 +22,6 @@
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
-    font-family: 'Roboto', sans-serif;
 }
 .centerSection button{
     padding: 0rem 1.5rem;
@@ -34,18 +33,11 @@
     color: #0292B1;
 }
 
-.navTitle {
-    font-size: 22px;
-    margin-right:auto;
-    color: #484848;
-    font-weight: 500;
-}
 .navContact{
     border: 1px solid #0292B1;
     margin-left: auto;
     height: 40px;
     padding: 0px 1rem;
     border-radius: 5px;
-    font-family: 'Roboto', sans-serif;
     color: #0292B1;
 }

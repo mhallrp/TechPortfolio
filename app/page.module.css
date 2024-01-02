@@ -1,45 +1,3 @@
-
-/* 
-
-.Home {
-  display: flex;
-  flex-wrap:wrap;
-  flex-direction: row;
-  align-items: center;
-  padding-top:70px;
-  min-height: calc(100vh - 70px);
-  background-color: #F5FCFF;
-}
-.topTextSection {
-  font-size: 3rem;
-  margin-left: 5rem;
-  padding-bottom: 5rem;
-} */
-/* .helloText {
-  font-size: 20px;
-  color: #484848;
-  margin-bottom: 16px;
-} */
-/* .topMainText {
-  font-weight: 700;
-  line-height: 65px;
-  margin-bottom: 16px;
-} */
-/* .topSkills {
-  font-size: 25px;
-  color: #484848;
-} */
-/* .greenSpan {
-  color: #0292b1;
-} */
-/* .topImage {
-  max-width: 500px;
-  max-height: 619px;
-  margin-left: 50px;
-  padding-bottom: 4rem;
-} */
-
-
 .Skills {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -92,58 +50,13 @@
 }
 /* @media (max-width: 1334px) {
 
-  .Home {
-    flex-direction: column;
-    min-height: fit-content;
-    padding-top: 0px;
-  }
 
-  .topTextSection {
-    text-align: center;
-    margin: auto;
-    padding-top: 4rem;
-    width: 80%;
-  }
-  .topImage {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    width: 35%;
-    height: auto;
-    margin-right: 32px;
-  }
-}
 @media (max-width: 1000px) {
-  .topTextSection {
-    margin: auto;
-    min-width: 0px;
-    font-size: 25px;
-    padding-bottom: 0px;
-  }
-  .topImage {
-    padding-bottom: 0px;
-  }
-  .topSkills {
-    font-size: 20px;
-  }
-  .topMainText {
-    line-height: 50px;
-  }
   .largeTitle {
     font-size: 40px;
   }
 }
 @media (max-width: 525px) {
-  .topTextSection {
-    margin: auto;
-    min-width: 0px;
-    font-size: 20px;
-  }
-  .topSkills {
-    font-size: 20px;
-  }
-  .topMainText {
-    line-height: 40px;
-  }
   .largeTitle {
     font-size: 30px;
   }

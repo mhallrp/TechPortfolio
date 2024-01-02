@@ -8,14 +8,14 @@ import constants from "./constants";
 
 const Landing = () => {
   return (
-    <>
+    <main className="font-sans">
       <NavBar />
       <section
         id={constants.sections[0]}
-        className="font-sans flex  pt-20 min-h-screen bg-primary "
+        className="flex pt-20 min-h-screen bg-primary "
       >
-        <div className="flex pt-4 px-8 w-full items-center flex-col xl:flex-row xl:pt-0 xl:px-20">
-          <div className="w-full flex flex-col text-center justify-center pb-16 xl:w-6/12 xl:text-left">
+        <div className="xl:flex-row xl:pt-0 xl:px-20 md:px-16 flex pt-4 px-4 w-full items-center flex-col">
+          <div className="xl:w-6/12 xl:text-left w-full flex flex-col text-center justify-center pb-16">
             <p className="text-xl text-grey pb-4">{constants.helloText}</p>
             <h1 className="font-bold leading-[3.5rem] pb-4 text-5xl">
               {constants.topTitle}
@@ -24,7 +24,7 @@ const Landing = () => {
           </div>
           <div>
             <Image
-              className="pb-16"
+              className="pb-16 pl-8"
               src={LaptopFire.src}
               alt="fire"
               height="619"
@@ -66,7 +66,7 @@ const Landing = () => {
       <section id={constants.sections[3]}>
         <div className={Styles.footer}></div>
       </section>
-    </>
+    </main>
   );
 };
 

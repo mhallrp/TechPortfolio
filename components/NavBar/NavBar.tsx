@@ -20,7 +20,7 @@ const NavBar = () => {
         <div className={Styles.leftSection}>
           <button
             onClick={() => scrollTo(constants.sections[0])}
-            className={Styles.navTitle}
+            className='font-oswald text-grey text-2xl font-medium mr-auto'
           >
             {constants.name}
           </button>

@@ -5,9 +5,9 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-
     fontFamily: {
-      sans: ["Roboto", "Arial", "san-serif"],
+      sans: ["var(--font-roboto)", "Arial", "san-serif"],
+      oswald: ["var(--font-oswald)"],
     },
     extend: {
       colors: {

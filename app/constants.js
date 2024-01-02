@@ -5,8 +5,8 @@ export const constants = {
     contact:"Contact Me",
     sections:[ 'Home', 'Skills', 'About', 'Portfolio' ],
     helloText: "Hello, I'm Matt",
-    topTitle: <>A <span className={ Styles.greenSpan }>full-stack </span> software developer based in Edinburgh</>,
-    topSkills:<>Drawing on 3 years of expertise in front-end and back-end development,<br/>I craft innovative applications for both mobile and web</>,
+    topTitle: <>A <span className='text-secondary'>full-stack </span> software developer based in Edinburgh</>,
+    topSkills:<>Drawing on 10+ years of expertise in the tech industry and more than 3 years in front and back-end development. I craft innovative applications for both mobile and web.</>,
     smallSkills: "My skills",
     bigSKills:"Technical Expertise",
     skillsData: [

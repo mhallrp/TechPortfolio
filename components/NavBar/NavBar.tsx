@@ -16,29 +16,27 @@ const NavBar = () => {
 
   return (
     <div className={Styles.navBar}>
-      <div className={Styles.navSection}>
-        <div className={Styles.leftSection}>
+      <div className={`${Styles.navSection} xl:px-20 md:px-16 md:grid-cols-nav px-8 grid grid-cols-2 `}>
+        <div className={`${Styles.leftSection} flex justify-start`}>
           <button
             onClick={() => scrollTo(constants.sections[0])}
-            className='font-oswald text-grey text-2xl font-medium mr-auto'
+            className='font-oswald text-grey text-2xl font-medium'
           >
             {constants.name}
           </button>
         </div>
-        <div className={Styles.centerSection}>
+        <div className={`${Styles.centerSection} hidden md:flex`}>
           {constants.sections.map((sectionName: string) => (
             <button
               key={sectionName}
-              className={
-                activeSection === sectionName ? Styles.buttonSelected : ""
-              }
+              className={activeSection === sectionName ? Styles.buttonSelected : ""}
               onClick={() => scrollTo(sectionName)}
             >
               {sectionName}
             </button>
           ))}
         </div>
-        <div className={Styles.rightSection}>
+        <div className={`${Styles.rightSection} flex justify-end md:justify-center`}>
           <button className={Styles.navContact}>{constants.contact}</button>
         </div>
       </div>

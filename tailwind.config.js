@@ -10,6 +10,10 @@ module.exports = {
       oswald: ["var(--font-oswald)"],
     },
     extend: {
+      gridTemplateColumns: {
+        nav: '1fr auto 1fr'
+      },
+      
       colors: {
         primary: "#f5fcff",
         secondary: "#0292b1",

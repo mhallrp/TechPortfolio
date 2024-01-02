@@ -27,3 +27,6 @@ a:visited {
   color: #0292b1;
 }
 
+.auto-grid {
+  grid-template-columns: 1fr auto 1fr;
+}

@@ -14,12 +14,12 @@ const NavBar = () => {
   };
 
   return (
-    <div className="flex flex-row h-16 fixed w-full bg-white items-center shadow-nav">
-      <div className="xl:px-20 md:px-16 md:grid-cols-nav w-full px-8 grid grid-cols-2">
+    <div className="fixed flex h-16 w-full flex-row items-center bg-white shadow-nav">
+      <div className="grid w-full grid-cols-2 px-8 md:grid-cols-nav md:px-16 xl:px-20">
         <div className="flex">
           <button
             onClick={() => scrollTo(constants.sections[0])}
-            className="font-oswald text-grey text-2xl font-medium"
+            className="font-oswald text-2xl font-medium text-grey"
           >
             {constants.name}
           </button>
@@ -40,7 +40,7 @@ const NavBar = () => {
           ))}
         </div>
         <div className="flex">
-          <button className="text-secondary ml-auto border border-secondary border-solid rounded px-4 h-10">
+          <button className="ml-auto h-10 rounded border border-solid border-secondary px-4 text-secondary">
             {constants.contact}
           </button>
         </div>

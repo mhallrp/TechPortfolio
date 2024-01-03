@@ -51,7 +51,7 @@ const Landing = () => {
       </section>
       <section
         id={constants.sections[2]}
-        className="px-8 py-24 font-bold sm:px-20 md:px-16"
+        className="px-8  font-bold sm:px-20 md:px-16"
       >
         <div className="flex w-full flex-row flex-wrap-reverse justify-center align-middle">
           <Image

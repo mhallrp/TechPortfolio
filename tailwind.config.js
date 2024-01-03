@@ -27,6 +27,10 @@ module.exports = {
         rem:'3.5rem',
       },
       keyframes: {
+        slideUp: {
+          '0%': { transform: 'translateY(0)', opacity: 1 },
+          '100%': { transform: 'translateY(-4rem)', opacity: 0 },
+        },
         slideDown: {
           '0%': { transform: 'translateY(-4rem)', opacity: 0 },
           '100%': { transform: 'translateY(0)', opacity: 1 },
@@ -34,6 +38,7 @@ module.exports = {
       },
       animation: {
         'slide-down': 'slideDown 0.2s ease-out forwards',
+        'slide-up': 'slideUp 0.2s ease-out forwards',
       },
     },
   },

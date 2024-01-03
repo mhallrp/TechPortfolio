@@ -1,11 +1,15 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FiMenu } from "react-icons/fi";
+import { MdClose } from "react-icons/md";
+
 import constants from "../../app/constants";
 
 const NavBar = () => {
   const [activeSection, setActiveSection] = useState("Home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   const scrollTo = (sectionId: string) => {
     const section = document.getElementById(sectionId);
@@ -17,8 +21,37 @@ const NavBar = () => {
   };
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    if (isMenuOpen) {
+      setIsClosing(true);
+      setTimeout(() => {
+        setIsMenuOpen(!isMenuOpen);
+        setIsClosing(false);
+      }, 200);
+    } else {
+      setIsMenuOpen(!isMenuOpen);
+    }
   };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      menuRef.current &&
+      !menuRef.current.contains(event.target as Node) &&
+      isMenuOpen
+    ) {
+      toggleMenu();
+    }
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isMenuOpen) {
+        toggleMenu();
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {window.removeEventListener("scroll", handleScroll);window.removeEventListener("mousedown", handleScroll)};
+  }, [isMenuOpen]);
 
   return (
     <div className="fixed flex h-16 w-full flex-row items-center bg-white shadow-nav">
@@ -53,13 +86,19 @@ const NavBar = () => {
         </div>
         <div className="flex md:hidden">
           <button onClick={toggleMenu} className="ml-auto h-10 text-secondary">
-            <FiMenu size={24} />
+            {isMenuOpen ? <MdClose size={24} /> : <FiMenu size={24} />}
           </button>
         </div>
       </div>
 
       {isMenuOpen && (
-        <div className="animate-slide-down absolute left-0 top-16 z-10 w-full bg-white md:hidden">
+        <div
+          ref={menuRef}
+          className={`${
+            isClosing ? "animate-slide-up" : "animate-slide-down"
+          } absolute left-0 top-16 w-full border-b bg-white md:hidden`}
+        >
+          {" "}
           {constants.sections.map((sectionName: string) => (
             <button
               key={sectionName}

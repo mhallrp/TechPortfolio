@@ -1,4 +1,3 @@
-import Styles from "./page.module.css";
 import NavBar from "../components/NavBar";
 import LaptopFire from "../assets/laptopFire.png";
 import MattImage from "../assets/mattImage.png";

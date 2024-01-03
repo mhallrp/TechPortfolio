@@ -34,7 +34,7 @@ const Landing = () => {
         </div>
 
       </section>
-      <section id={constants.sections[1]} className="font-bold py-24 px-20">
+      <section id={constants.sections[1]} className="xl:px-20 md:px-16 px-8 font-bold py-24 ">
         <p>{constants.smallSkills}</p>
         <p className={Styles.largeTitle}>{constants.bigSKills}</p>
         <div className={Styles.skillCards}>

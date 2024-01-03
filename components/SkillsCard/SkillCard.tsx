@@ -27,7 +27,7 @@ const SkillCard = (props: SkillCardProps) => {
   };
 
   return (
-    <div className="md:w-[355px] w-full p-4 bg-skillbg border-b-4 m-2  rounded-xl border-secondary">
+    <div className="sm:w-[355px] w-full p-4 bg-skillbg border-b-4 m-2 rounded-xl border-secondary">
       {image()}
       <h3 className='mb-2.5 mt-0'>{props.title}</h3>
       <p className="text-base font-normal"> {props.text} </p>

@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Styles from "./styles.module.css";
 import constants from "../../app/constants";
 
 const NavBar = () => {
@@ -25,11 +24,15 @@ const NavBar = () => {
             {constants.name}
           </button>
         </div>
-        <div className={`${Styles.centerSection} hidden md:flex`}>
+        <div className="hidden md:flex">
           {constants.sections.map((sectionName: string) => (
             <button
               key={sectionName}
-              className={activeSection === sectionName ? "px-6 text-sm text-secondary" : "px-6 text-sm"}
+              className={
+                activeSection === sectionName
+                  ? "px-6 text-sm text-secondary"
+                  : "px-6 text-sm"
+              }
               onClick={() => scrollTo(sectionName)}
             >
               {sectionName}
@@ -37,7 +40,9 @@ const NavBar = () => {
           ))}
         </div>
         <div className="flex">
-          <button className={Styles.navContact}>{constants.contact}</button>
+          <button className="text-secondary ml-auto border border-secondary border-solid rounded px-4 h-10">
+            {constants.contact}
+          </button>
         </div>
       </div>
     </div>

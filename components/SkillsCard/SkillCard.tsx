@@ -7,10 +7,10 @@ import DevIcon from "../../assets/devOpsIcon.png";
 import Image from "next/image";
 
 interface SkillCardProps {
-    image: number;
-    title: string;
-    text: string;
-  }
+  image: number;
+  title: string;
+  text: string;
+}
 
 const SkillCard = (props: SkillCardProps) => {
   const image = () => {
@@ -27,10 +27,10 @@ const SkillCard = (props: SkillCardProps) => {
   };
 
   return (
-    <div className={Styles.skillCard}>
+    <div className="md:w-[355px] w-full p-4 bg-skillbg border-b-4 m-2  rounded-xl border-secondary">
       {image()}
-      <h3>{props.title}</h3>
-      <p> {props.text} </p>
+      <h3 className='mb-2.5 mt-0'>{props.title}</h3>
+      <p className="text-base font-normal"> {props.text} </p>
     </div>
   );
 };

@@ -11,7 +11,8 @@ module.exports = {
     },
     extend: {
       boxShadow: {
-        nav:'0rem 0.5rem 5rem 0rem rgba(0, 0, 0, 0.10)'
+        nav:'0rem 0.5rem 5rem 0rem rgba(0, 0, 0, 0.10)',
+        skill:'0rem 0.5rem 5rem 0rem rgba(0, 0, 0, 0.08)',
       },
       gridTemplateColumns: {
         nav: '1fr auto 1fr'
@@ -20,6 +21,7 @@ module.exports = {
         primary: "#f5fcff",
         secondary: "#0292b1",
         grey: "#484848",
+        skillbg:"#f0f8fc"
       },
       lineHeight: {
         rem:'3.5rem',

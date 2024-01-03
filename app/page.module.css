@@ -1,5 +1,4 @@
 .Skills {
-  font-family: "Roboto", sans-serif;
   font-weight: 700;
   padding: 100px 85px;
 }
@@ -10,13 +9,11 @@
 .skillCards {
   display: flex;
   flex-wrap: wrap;
-
   justify-content: space-evenly;
   margin-top: 35px;
 }
 
 .About {
-  font-family: "Roboto", sans-serif;
   font-weight: 700;
   padding: 100px 85px;
 }

@@ -20,7 +20,7 @@ const Landing = () => {
             <h1 className="md:text-5xl md:leading-[3.5rem] font-bold  pb-4 text-4xl">
               {constants.topTitle}
             </h1>
-            <p className="text-grey md:text-xl">{constants.topSkills}</p>
+            <p className="md:text-xl text-grey">{constants.topSkills}</p>
           </div>
           <div>
             <Image
@@ -32,8 +32,9 @@ const Landing = () => {
             />
           </div>
         </div>
+
       </section>
-      <section id={constants.sections[1]} className={Styles.Skills}>
+      <section id={constants.sections[1]} className="font-bold py-24 px-20">
         <p>{constants.smallSkills}</p>
         <p className={Styles.largeTitle}>{constants.bigSKills}</p>
         <div className={Styles.skillCards}>
@@ -47,6 +48,7 @@ const Landing = () => {
           ))}
         </div>
       </section>
+
       <section id={constants.sections[2]} className={Styles.About}>
         <div className={Styles.aboutData}>
           <Image

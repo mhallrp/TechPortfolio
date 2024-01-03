@@ -1,5 +1,3 @@
-import Styles from './page.module.css'
-
 export const constants = {
     name:"MATT HALL",
     contact:"Contact Me",

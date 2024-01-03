@@ -1,5 +1,4 @@
 import React from "react";
-import Styles from "./styles.module.css";
 import CodeIcon from "../../assets/codeIcon.png";
 import DBIcon from "../../assets/dbIcon.png";
 import EditorIcon from "../../assets/editorIcon.png";

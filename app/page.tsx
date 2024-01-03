@@ -6,9 +6,12 @@ import Image from "next/image";
 import constants from "./constants";
 
 const Landing = () => {
+
   return (
     <main className="font-sans">
-      <NavBar />
+      <div className="fixed w-full">
+        <NavBar />
+      </div>
       <section
         id={constants.sections[0]}
         className="flex min-h-screen bg-primary pt-20 "
@@ -56,7 +59,7 @@ const Landing = () => {
         <div className="flex w-full flex-row flex-wrap-reverse justify-center align-middle">
           <Image
             height="416"
-            width="550"
+            width="500"
             className="m-auto pt-6"
             src={MattImage.src}
             alt="Matt Hall"
@@ -68,8 +71,16 @@ const Landing = () => {
           </div>
         </div>
       </section>
-      <section id={constants.sections[3]}>
-        <div className="h-48 bg-primary"></div>
+      <section
+        id={constants.sections[3]}
+        className="px-8 py-24 font-bold md:px-16 xl:px-20 "
+      >
+        <p>{constants.smallPortfolio}</p>
+        <p className="mt-6 text-5xl">{constants.bigPortfolio}</p>
+        <div className="mt-9 flex flex-wrap justify-evenly"></div>
+      </section>
+      <section>
+        <div className="h-60 bg-primary"></div>
       </section>
     </main>
   );

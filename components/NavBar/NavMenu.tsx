@@ -6,10 +6,10 @@ interface NavMenuProps {
   toggleMenu: () => void;
   isClosing: boolean;
   scrollTo: (sectionId: string) => void;
+  activeSection: string;
 }
 
 const NavMenu = (props: NavMenuProps) => {
-    
   const menuRef = useRef<HTMLDivElement>(null);
 
   const handleClickOutside = (event: MouseEvent) => {
@@ -46,7 +46,9 @@ const NavMenu = (props: NavMenuProps) => {
       {Constants.sections.map((sectionName: string) => (
         <button
           key={sectionName}
-          className="w-full py-2 text-center"
+          className={`w-full py-2 text-center ${
+            props.activeSection === sectionName && "text-secondary"
+          }`}
           onClick={() => props.scrollTo(sectionName)}
         >
           {sectionName}

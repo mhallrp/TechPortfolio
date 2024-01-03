@@ -50,24 +50,27 @@ const Landing = () => {
           ))}
         </div>
       </section>
-      <section id={constants.sections[2]} className="px-20 py-24">
-        <div className={Styles.aboutData}>
+      <section
+        id={constants.sections[2]}
+        className="px-8 py-24 font-bold sm:px-20 md:px-16"
+      >
+        <div className="flex w-full flex-row flex-wrap-reverse justify-center align-middle">
           <Image
             height="416"
             width="550"
-            className={Styles.mattImage}
+            className="m-auto pt-6"
             src={MattImage.src}
             alt="Matt Hall"
           />
-          <div className={Styles.aboutText}>
+          <div className="mt-9 w-full xl:w-2/4">
             <p>{constants.smallAbout}</p>
-            <p className={Styles.largeTitle}>{constants.bigAbout}</p>
-            <p className={Styles.aboutMainText}>{constants.aboutMainText}</p>
+            <p className="mt-6 text-5xl">{constants.bigAbout}</p>
+            <p className="pt-5 font-normal">{constants.aboutMainText}</p>
           </div>
         </div>
       </section>
       <section id={constants.sections[3]}>
-        <div className={Styles.footer}></div>
+        <div className="h-48 bg-primary"></div>
       </section>
     </main>
   );

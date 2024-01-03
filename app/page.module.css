@@ -1,35 +1,6 @@
-.About {
-  font-weight: 700;
-  padding: 100px 85px;
-}
 
-.aboutData {
-  flex-wrap: wrap-reverse;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.aboutText {
-  margin-top: 35px;
-  margin-right: 85px;
-  width: calc(50% - 85px);
-}
-.aboutMainText {
-  padding-top: 20px;
-  font-weight: 400;
-  line-height: 25px;
-}
-.mattImage {
-  padding-top: 25px;
-  width: 550px;
-  margin: auto;
-}
 
-.footer {
-  height: 200px;
-  background-color: #f5fcff;
-}
+
 /* @media (max-width: 1334px) {
 
 

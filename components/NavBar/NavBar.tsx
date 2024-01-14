@@ -6,7 +6,6 @@ import NavMenu from "./NavMenu";
 import Constants from "../../app/constants";
 
 const NavBar = () => {
-
   const [activeSection, setActiveSection] = useState("Home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
@@ -17,9 +16,10 @@ const NavBar = () => {
       for (const sectionId of Constants.sections) {
         const sectionElement = document.getElementById(sectionId);
         if (sectionElement) {
-          const topPosition = sectionElement.getBoundingClientRect().top + window.scrollY;
+          const topPosition =
+            sectionElement.getBoundingClientRect().top + window.scrollY;
           const offsetBuffer = 400;
-          if (topPosition - offsetBuffer <= window.scrollY ) {
+          if (topPosition - offsetBuffer <= window.scrollY) {
             newActiveSection = sectionId;
           }
         }
@@ -33,7 +33,6 @@ const NavBar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [activeSection]);
-  
 
   const scrollTo = (sectionId: string) => {
     const section = document.getElementById(sectionId);

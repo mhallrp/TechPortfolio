@@ -6,7 +6,6 @@ import Image from "next/image";
 import constants from "./constants";
 
 const Landing = () => {
-
   return (
     <main className="font-sans">
       <div className="fixed w-full">

@@ -1,4 +1,4 @@
-// import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBar";
 import LaptopFire from "../assets/laptopFire.png";
 import MattImage from "../assets/mattImage.png";
 import SkillCard from "../components/SkillsCard";
@@ -8,12 +8,12 @@ import constants from "./constants";
 const Landing = () => {
   return (
     <main className="font-sans ">
-      {/* <div className="fixed w-full">
+      <div className="fixed w-full">
         <NavBar />
-      </div> */}
+      </div>
       <section
         id={constants.sections[0]}
-        className="flex h-dvh bg-primary  "
+        className="flex min-h-screen bg-primary pt-20 "
       >
         <div className="flex w-full flex-col items-center px-8 pt-4 md:px-16 xl:flex-row xl:px-20 xl:pt-0">
           <div className="flex w-full flex-col justify-center pb-16 text-center xl:w-6/12 xl:text-left">

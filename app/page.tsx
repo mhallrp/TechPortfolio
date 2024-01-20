@@ -7,13 +7,13 @@ import constants from "./constants";
 
 const Landing = () => {
   return (
-    <main className="font-sans">
+    <main className="font-sans ">
       <div className="fixed w-full">
         <NavBar />
       </div>
       <section
         id={constants.sections[0]}
-        className="flex min-h-screen bg-primary pt-20 "
+        className="flex min-h-dvh bg-primary pt-20 "
       >
         <div className="flex w-full flex-col items-center px-8 pt-4 md:px-16 xl:flex-row xl:px-20 xl:pt-0">
           <div className="flex w-full flex-col justify-center pb-16 text-center xl:w-6/12 xl:text-left">

@@ -1,31 +1,24 @@
 import { useEffect, useRef } from "react";
 import Constants from "../../app/constants";
+import { NavMenuProps } from "@/types";
 
-interface NavMenuProps {
-  isMenuOpen: boolean;
-  toggleMenu: () => void;
-  isClosing: boolean;
-  scrollTo: (sectionId: string) => void;
-  activeSection: string;
-}
-
-const NavMenu = (props: NavMenuProps) => {
+const NavMenu: React.FC<NavMenuProps> = ({ isMenuOpen, toggleMenu, isClosing, activeSection, scrollTo }) => {
   const menuRef = useRef<HTMLDivElement>(null);
 
   const handleClickOutside = (event: MouseEvent) => {
     if (
       menuRef.current &&
       !menuRef.current.contains(event.target as Node) &&
-      props.isMenuOpen
+      isMenuOpen
     ) {
-      props.toggleMenu();
+      toggleMenu();
     }
   };
 
   useEffect(() => {
     const handleScroll = () => {
-      if (props.isMenuOpen) {
-        props.toggleMenu();
+      if (isMenuOpen) {
+        toggleMenu();
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -34,22 +27,22 @@ const NavMenu = (props: NavMenuProps) => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("mousedown", handleScroll);
     };
-  }, [props.isMenuOpen]);
+  }, [isMenuOpen]);
 
   return (
     <div
       ref={menuRef}
       className={`${
-        props.isClosing ? "animate-slide-up" : "animate-slide-down"
+        isClosing ? "animate-slide-up" : "animate-slide-down"
       } absolute left-0 top-16 w-full border-b bg-white md:hidden`}
     >
       {Constants.sections.map((sectionName: string) => (
         <button
           key={sectionName}
           className={`w-full py-2 text-center ${
-            props.activeSection === sectionName && "text-secondary"
+            activeSection === sectionName && "text-secondary"
           }`}
-          onClick={() => props.scrollTo(sectionName)}
+          onClick={() => scrollTo(sectionName)}
         >
           {sectionName}
         </button>

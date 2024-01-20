@@ -1,4 +1,4 @@
-import NavBar from "../components/NavBar";
+// import NavBar from "../components/NavBar";
 import LaptopFire from "../assets/laptopFire.png";
 import MattImage from "../assets/mattImage.png";
 import SkillCard from "../components/SkillsCard";
@@ -8,9 +8,9 @@ import constants from "./constants";
 const Landing = () => {
   return (
     <main className="font-sans ">
-      <div className="fixed w-full">
+      {/* <div className="fixed w-full">
         <NavBar />
-      </div>
+      </div> */}
       <section
         id={constants.sections[0]}
         className="flex h-dvh bg-primary pt-20 "

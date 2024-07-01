@@ -6,6 +6,7 @@ import NavMenu from "./NavMenu";
 import Constants from "../../app/constants";
 
 const NavBar = () => {
+  
   const [activeSection, setActiveSection] = useState("Home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);

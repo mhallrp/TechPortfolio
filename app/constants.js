@@ -3,7 +3,7 @@ export const constants = {
     contact:"Contact Me",
     sections:[ 'Home', 'Skills', 'About', 'Portfolio' ],
     helloText: "Hello, I'm Matt",
-    topTitle: <>A <span className='text-secondary'>full-stack </span> software developer based in Edinburgh</>,
+    topTitle: <>A <span className='text-secondary'>full-stack </span> software developer</>,
     topSkills:<>Drawing on 10+ years of expertise in the tech industry and more than 3 years in front and back-end development. I craft innovative applications for both mobile and web.</>,
     smallSkills: "Skills",
     bigSKills:"Technical Expertise",
